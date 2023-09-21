@@ -5,6 +5,6 @@ El trabajo se llevó a cabo en duplas usando Spring Boot (Java). Consiste en una
 
 Dentro de este repositorio se encuentra un archivo PDF con las consignas con las que debía cumplir el sistema.
 
-Por ultimo, en el [repositorio original](https://github.com/bmermel/ProyectoFinal-DH-Backend) continuaremos realizando cambios con fines practivcos y didacticos.
+Por ultimo, en el [repositorio original](https://github.com/bmermel/ProyectoFinal-DH-Backend) continuaremos realizando cambios con fines practicos y didacticos.
 
 Saludos.
