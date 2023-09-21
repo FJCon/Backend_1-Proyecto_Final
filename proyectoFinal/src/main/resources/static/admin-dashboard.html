@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/admin-dashboard.css">
+    <title>Admin Dashboard</title>
+    <script src="scripts/admin-dashboard.js"></script>
+</head>
+<body>
+    <head>
+        <nav>
+            <p>Admin</p>
+            <button>Cerrar Sesion</button>
+        </nav>
+    </head>
+    <main>
+        <h1>GESTOR DEL ADMINISTRADOR</h1>
+        <section id="main">
+       <section class="conteiner-nuevo-turno" id="cont-nuevo-paciente">
+        <button id="nuevo-paciente">NUEVO PACIENTE</button>
+        <form action="" class="form-nuevo-paciente border hidden" id="form-nuevo-paciente">
+            <div class="opciones">
+                <label for="inputNombrePaciente">Nombre:</label>
+                <input name="inputnombre" id="inputNombrePaciente">
+            </div>
+            <div class="opciones">
+                <label for="apellido">Apellido:</label>
+                <input name="apellido" id="apellido">           
+            </div>
+            <div class="opciones">
+                <label for="dni">Dni:</label>
+                <input name="dni" id="dni">           
+            </div>    
+            <h4>Domicilio</h4>        
+            <div class="opciones">
+                <label for="calle">Calle:</label>
+                <input name="calle" id="calle">
+            </div>
+            <div class="opciones">
+                <label for="numero">Numero:</label>
+                <input name="numero" id="numero">
+            </div>
+            <div class="opciones">
+                <label for="localidad">Localidad:</label>
+                <input name="localidad" id="localidad">
+            </div>
+            <div class="opciones">
+                <label for="provincia">Provincia:</label>
+                <input name="provincia" id="provincia">
+            </div>            
+            <button id="enviar-form-paciente">CREAR</button>
+        </form>
+    </section>
+    <section class="conteiner-nuevo-turno" id="cont-nuevo-odontologo">
+        <button id="nuevo-odontologo">NUEVO ODONTOLOGO</button>
+        <form action="" class="form-nuevo-odontologo border hidden" id="form-nuevo-odontologo">
+            <div class="opciones">
+                <label for="inputNombreOdontologo">Nombre:</label>
+                <input name="inputnombre" id="inputNombreOdontologo">
+            </div>
+            <div class="opciones">
+                <label for="apellido">Apellido:</label>
+                <input name="apellido" id="apellidoOdo">           
+            </div>
+            <div class="opciones">
+                <label for="matricula">Matricula:</label>
+                <input name="matricula" id="matricula">           
+            </div>    
+            
+            <button id="enviar-form-odontologo">CREAR</button>
+        </form>
+    </section>
+</section>
+<section class="listas flex" id="listas">
+    <button id="btn-pa-list">Ver lista de pacientes</button>
+    <button id="btn-odo-list">Ver lista de odontologos</button>
+</section>
+
+</section>
+       <div class="conteine-lista">
+       </div>      
+    </main>
+</body>
+</html>

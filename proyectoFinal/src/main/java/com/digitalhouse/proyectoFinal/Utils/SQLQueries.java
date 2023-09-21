@@ -1,0 +1,47 @@
+package com.digitalhouse.proyectoFinal.Utils;
+
+public class SQLQueries {
+    //QUERIES ODONTOLOGOS
+    public static final String CREAR_TABLA_ODONTOLOGOS =
+            "DROP TABLE IF EXISTS ODONTOLOGO;" +
+            "CREATE TABLE ODONTOLOGO(ID INT PRIMARY KEY, MATRICULA VARCHAR(255),NOMBRE VARCHAR(255), APELLIDO VARCHAR(255));";
+    public static final String INSERT_CUSTOM_ODONTOLOGO = "INSERT INTO ODONTOLOGO VALUES(?,?,?);";
+    public static final String TRAER_TODOS_ODONTOLOGOS = "SELECT * FROM ODONTOLOGO";
+    public static final String TRAER_ODONTOLOGO = "SELECT MATRICULA, NOMBRE, APELLIDO FROM ODONTOLOGO WHERE ID = ?";
+    public static final String ACTUALIZAR_ODONTOLOGO = "UPDATE ODONTOLOGO SET NOMBRE = ?, APELLIDO = ?, MATRICULA=? WHERE ID = ?;";
+    public static final String BORRAR_ODONTOLOGO = "DELETE FROM ODONTOLOGO WHERE ID = ?;";
+
+    //QUERIES PARA TABLA PACIENTES
+    public static final String CREAR_TABLA_PACIENTES =
+            "DROP TABLE IF EXISTS PACIENTE;" +
+                    "CREATE TABLE PACIENTE(ID INT PRIMARY KEY, DNI VARCHAR(15) NOT NULL, NOMBRE VARCHAR(255) NOT NULL, APELLIDO VARCHAR(255)NOT NULL, DOMICILIO VARCHAR(255)NOT NULL, FECHAALTA DATE NOT NULL);";
+
+    public static final String INSERT_CUSTOM_PACIENTE = "INSERT INTO PACIENTE VALUES(?,?,?,?,?,?);";
+
+    public static final String TRAER_TODOS_PACIENTES = "SELECT * FROM PACIENTE";
+
+    public static final String TRAER_PACIENTE = "SELECT DNI, NOMBRE, APELLIDO, DOMICILIO, FECHAALTA FROM PACIENTE WHERE ID = ?";
+    public static final String ACTUALIZAR_PACIENTE = "UPDATE PACIENTE SET DNI = ?, NOMBRE = ?, APELLIDO = ?, DOMICILIO = ?, FECHAALTA = ? WHERE ID = ?;";
+
+    public static final String BORRAR_PACIENTE = "DELETE FROM PACIENTE WHERE ID = ?;";
+
+
+    //QUERIES PARA TURNOS
+    public static final String CREAR_TABLA_TURNOS =
+            "DROP TABLE IF EXISTS TURNO;" +
+            "CREATE TABLE TURNO (ID INT NOT NULL AUTO_INCREMENT,"+
+            "MATRICULA INT NOT NULL," +
+            "DNI INT NOT NULL,"+
+            "FECHA DATETIME NOT NULL," +
+            "HORA TIME NOT NULL," +
+            "PRIMARY KEY (ID)," +
+            "FOREIGN KEY (MATRICULA) REFERENCES ODONTOLOGO (MATRICULA),"+
+            "FOREIGN KEY (DNI) REFERENCES PACIENTE (DNI));";
+    public static final String INSERT_CUSTOM_TURNO = "INSERT INTO TURNO VALUES(?,?,?,?,?);";
+    public static final String TRAER_TODOS_TURNOS = "SELECT * FROM TURNO";
+    public static final String TRAER_TURNO = "";
+    public static final String ACTUALIZAR_TURNO = "UPDATE TURNO SET MATRICULA = ?, DNI = ? , FECHA = ?, HORA = ? WHERE ID = ?;";
+    public static final String BORRAR_TURNO = "DELETE FROM TURNO WHERE ID = ?;";
+
+
+}
